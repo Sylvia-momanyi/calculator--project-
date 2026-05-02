@@ -107,3 +107,27 @@ function memoryClear() {
         navigator.vibrate(80);
     }
 }
+
+document.addEventListener("keydown", function(event) {
+    let key = event.key;
+
+    // Numbers and operators
+    if (!isNaN(key) || "+-*/.".includes(key)) {
+        press(key);
+    }
+
+    // Enter = calculate
+    if (key === "Enter") {
+        calculate();
+    }
+
+    // Backspace = delete last character
+    if (key === "Backspace") {
+        backspace();
+    }
+
+    // Escape = clear display
+    if (key === "Escape") {
+        clearDisplay();
+    }
+});
