@@ -1,4 +1,5 @@
 <script>
+  console.log("JS is working");
   let memory = 0;
     let display = document.getElementById("display");
     function press(value) {
