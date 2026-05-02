@@ -1,4 +1,4 @@
-script>
+<script>
   let memory = 0;
     let display = document.getElementById("display");
     function press(value) {
