@@ -1,2 +1,19 @@
-# calculator--project-
-A scientific calculator built using Hyper Text Markup Language, Cascading style Sheet and JavaScript with memory, history and scientific functions 
+# Modern Calculator App
+
+This is a simple and modern calculator built using HTML, CSS, and JavaScript.
+
+## Features
+- Basic arithmetic operations (+, -, ×, ÷)
+- Scientific functions (sin, cos, tan, sqrt, log, ln)
+- Memory functions (MC, MR, M+, M-)
+- Keyboard support
+- Calculation history
+- Modern UI design
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Live Demo
+Available via GitHub Pages
