@@ -41,14 +41,15 @@ function calculate() {
     try {
         let expression = display.value;
 
-        // Convert scientific functions into JavaScript math
+        // Convert scientific functions properly
         expression = expression
-            .replace(/sin/g, "Math.sin")
-            .replace(/cos/g, "Math.cos")
-            .replace(/tan/g, "Math.tan")
-            .replace(/sqrt/g, "Math.sqrt")
-            .replace(/log/g, "Math.log10")
-            .replace(/ln/g, "Math.log");
+            .replace(/sin\(/g, "Math.sin(")
+            .replace(/cos\(/g, "Math.cos(")
+            .replace(/tan\(/g, "Math.tan(")
+            .replace(/sqrt\(/g, "Math.sqrt(")
+            .replace(/log\(/g, "Math.log10(")
+            .replace(/ln\(/g, "Math.log(")
+            .replace(/Math.PI/g, Math.PI);
 
         let result = eval(expression);
 
@@ -61,18 +62,6 @@ function calculate() {
         display.value = "Error";
     }
 }
-
-// =====================
-// HISTORY FUNCTION
-// =====================
-function clearHistory() {
-    history.innerHTML = "";
-
-    if (navigator.vibrate) {
-        navigator.vibrate(80);
-    }
-}
-
 // =====================
 // MEMORY FUNCTIONS
 // =====================
